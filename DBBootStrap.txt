@@ -1,0 +1,20 @@
+create database task14;
+use task14;
+
+CREATE TABLE insurance_health (insurance_health_id INT, insurance_id INT, disease_id INT, perscription_id INT);
+LOAD DATA LOCAL INFILE 'insurance_health.csv' INTO TABLE insurance_health FIELDS TERMINATED BY ';' LINES TERMINATED BY '\n' IGNORE 1 LINES;
+
+CREATE TABLE insurance_company (insurance_id INT, insurance_member_id VARCHAR(50), plan_number INT, firstname VARCHAR(50), lastname VARCHAR(50), gender VARCHAR(50), dob VARCHAR(50), address VARCHAR(50), zip INT, ethnicity VARCHAR(50), ssn VARCHAR(50), city VARCHAR(50), state VARCHAR(50));
+LOAD DATA LOCAL INFILE 'insurance_company.csv' INTO TABLE insurance_company FIELDS TERMINATED BY ';' LINES TERMINATED BY '\n' IGNORE 1 LINES;
+
+CREATE TABLE grocery_store(grocery_id INT, grocery_member_id VARCHAR(50), firstname VARCHAR(50), lastname VARCHAR(50), gender VARCHAR(5), dob VARCHAR(50), address VARCHAR(50), credit_card VARCHAR(50), ad_keywords VARCHAR(50), coupon_code VARCHAR(50), ssn VARCHAR(50), ethnicity VARCHAR(50), zip VARCHAR(50), city VARCHAR(50), state VARCHAR(50));
+LOAD DATA LOCAL INFILE 'grocery_store.csv' INTO TABLE grocery_store FIELDS TERMINATED BY ';' LINES TERMINATED BY '\n' IGNORE 1 LINES;
+
+CREATE TABLE disease_id(disease_id INT, disease_name VARCHAR(50));
+LOAD DATA LOCAL INFILE 'disease_id.csv' INTO TABLE disease_id FIELDS TERMINATED BY ';' LINES TERMINATED BY '\n' IGNORE 1 LINES;
+
+CREATE TABLE prescriptions(perscription_id INT, disease_treats VARCHAR(50), chemical_name VARCHAR(50), marketing_name VARCHAR(50), perscription_probability VARCHAR(50));
+LOAD DATA LOCAL INFILE 'prescriptions.csv' INTO TABLE prescriptions FIELDS TERMINATED BY ';' LINES TERMINATED BY '\n' IGNORE 1 LINES;
+
+CREATE TABLE allData (insurance_member_id VARCHAR(50), grocery_member_id VARCHAR(50), plan_number INT, dob VARCHAR(50), address VARCHAR(50), credit_card VARCHAR(50), ad_keywords VARCHAR(50), coupon_code VARCHAR(50),firstname VARCHAR(50), lastname VARCHAR(50), gender VARCHAR(5),ethnicity VARCHAR(50), ssn VARCHAR(50), zip VARCHAR(50), id INT, city VARCHAR(50), state VARCHAR(50));
+LOAD DATA LOCAL INFILE 'all.csv' INTO TABLE allData FIELDS TERMINATED BY ';' LINES TERMINATED BY '\n' IGNORE 1 LINES;
