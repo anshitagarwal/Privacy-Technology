@@ -86,8 +86,12 @@ public class AuditorAction extends Action {
 	@Override
 	public String perform(HttpServletRequest request) {
 		performAction();
+<<<<<<< HEAD
 		// If condition on the basis of what was clicked
 		//return "filename.csv" + pw2.toString() + ".download";
+=======
+		System.out.println(request.getParameter("act"));
+>>>>>>> 99c9a970aed70c036b1f9a9a6b34a0fe6acb4f96
 		return "auditor.jsp";
 	}
 	
