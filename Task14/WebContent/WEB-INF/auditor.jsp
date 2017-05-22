@@ -9,6 +9,11 @@
 <title>Auditor page</title>
 </head>
 <body>
+	<form action="auditor">
+		<input type="submit" name="act" value="origin"/>
+		<input type="submit" name="act" value="consent"/>
+		<input type="submit" name="act" value="noconsent"/>
+	</form>
 	<table>
 		<tbody>
 			<c:forEach var = "record" items = "${records }">

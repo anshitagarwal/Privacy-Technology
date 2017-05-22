@@ -83,6 +83,7 @@ public class AuditorAction extends Action {
 	@Override
 	public String perform(HttpServletRequest request) {
 		performAction();
+		System.out.println(request.getParameter("act"));
 		return "auditor.jsp";
 	}
 	
