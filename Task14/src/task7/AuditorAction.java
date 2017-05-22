@@ -1,6 +1,9 @@
 package task7;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import java.io.*;
 import java.sql.*;
 
@@ -9,6 +12,9 @@ public class AuditorAction extends Action {
 	
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     static final String DB_URL = "jdbc:mysql://localhost/task14";
+    StringBuffer pw1;
+    StringBuffer pw2;
+    StringBuffer pw3;
     
     public void performAction() {
         Connection conn = null;
@@ -21,13 +27,13 @@ public class AuditorAction extends Action {
             sql = "SELECT * FROM finalData";
             ResultSet rs = stmt.executeQuery(sql);
             
-            PrintWriter pw1 = new PrintWriter(new File("output_NoConsent.csv"), "UTF-8");
-            PrintWriter pw2 = new PrintWriter(new File("output_Consent.csv"), "UTF-8");
-            PrintWriter pw3 = new PrintWriter(new File("original_file.csv"), "UTF-8");
+            pw1 = new StringBuffer();
+            pw2 = new StringBuffer();
+            pw3 = new StringBuffer();
 
-            pw1.print("GENDER,BIRTHYEAR,ETHNICITY,STATE,DISEASE_NAME,AD_KEYWORDS,COUPON_CODE,DISEASE_TREATS,CHEMICAL_NAME,MARKETTING_NAME,PRESCRIPTION_PROBABILITY\n");
-            pw2.print("FIRSTNAME,LASTNAME,ADDRESS,CITY,ZIP,SSN,GENDER,BIRTHYEAR,ETHNICITY,STATE,DISEASE_NAME,AD_KEYWORDS,COUPON_CODE,DISEASE_TREATS,CHEMICAL_NAME,MARKETTING_NAME,PRESCRIPTION_PROBABILITY\n");
-            pw3.print("FIRSTNAME,LASTNAME,ADDRESS,CITY,ZIP,SSN,GENDER,BIRTHYEAR,ETHNICITY,STATE,DISEASE_NAME,AD_KEYWORDS,COUPON_CODE,DISEASE_TREATS,CHEMICAL_NAME,MARKETTING_NAME,PRESCRIPTION_PROBABILITY\n");
+            pw1.append("GENDER,BIRTHYEAR,ETHNICITY,STATE,DISEASE_NAME,AD_KEYWORDS,COUPON_CODE,DISEASE_TREATS,CHEMICAL_NAME,MARKETTING_NAME,PRESCRIPTION_PROBABILITY\n");
+            pw2.append("FIRSTNAME,LASTNAME,ADDRESS,CITY,ZIP,SSN,GENDER,BIRTHYEAR,ETHNICITY,STATE,DISEASE_NAME,AD_KEYWORDS,COUPON_CODE,DISEASE_TREATS,CHEMICAL_NAME,MARKETTING_NAME,PRESCRIPTION_PROBABILITY\n");
+            pw3.append("FIRSTNAME,LASTNAME,ADDRESS,CITY,ZIP,SSN,GENDER,BIRTHYEAR,ETHNICITY,STATE,DISEASE_NAME,AD_KEYWORDS,COUPON_CODE,DISEASE_TREATS,CHEMICAL_NAME,MARKETTING_NAME,PRESCRIPTION_PROBABILITY\n");
 
             while(rs.next()) {
                 String disease_name  = rs.getString("disease_name");
@@ -54,18 +60,15 @@ public class AuditorAction extends Action {
                 String data_sharing = rs.getString("data_sharing");
 
                 if (data_sharing.equals("NO")) {
-                    pw1.print(gender + "," + dob.substring(1, 5)  + "," + ethnicity + "," + state + "," + disease_name + "," + ad_keywords + "," + coupon_code + "," + disease_treats + "," + chemical_name + "," + marketing_name + "," + perscription_probability + "\n");
+                	pw1.append(gender + "," + dob.substring(1, 5)  + "," + ethnicity + "," + state + "," + disease_name + "," + ad_keywords + "," + coupon_code + "," + disease_treats + "," + chemical_name + "," + marketing_name + "," + perscription_probability + "\n");
                 } else {
-                    pw2.print(firstname + "," + lastname + "," + address + "," + city + "," + zip + "," + ssn + "," + gender + "," + dob + "," + ethnicity + "," + state + "," + disease_name + "," + ad_keywords + "," + coupon_code + "," + disease_treats + "," + chemical_name + "," + marketing_name + "," + perscription_probability + "\n");
+                	pw2.append(firstname + "," + lastname + "," + address + "," + city + "," + zip + "," + ssn + "," + gender + "," + dob + "," + ethnicity + "," + state + "," + disease_name + "," + ad_keywords + "," + coupon_code + "," + disease_treats + "," + chemical_name + "," + marketing_name + "," + perscription_probability + "\n");
                 }
-                pw3.print(firstname + "," + lastname + "," + address + "," + city + "," + zip + "," + ssn + "," + gender + "," + dob + "," + ethnicity + "," + state + "," + disease_name + "," + ad_keywords + "," + coupon_code + "," + disease_treats + "," + chemical_name + "," + marketing_name + "," + perscription_probability + "\n");
+                pw3.append(firstname + "," + lastname + "," + address + "," + city + "," + zip + "," + ssn + "," + gender + "," + dob + "," + ethnicity + "," + state + "," + disease_name + "," + ad_keywords + "," + coupon_code + "," + disease_treats + "," + chemical_name + "," + marketing_name + "," + perscription_probability + "\n");
             }
             rs.close();
             stmt.close();
             conn.close();
-            pw1.close();
-            pw2.close();
-            pw3.close();
         } catch(Exception e) {
             e.printStackTrace();
         }
@@ -83,6 +86,8 @@ public class AuditorAction extends Action {
 	@Override
 	public String perform(HttpServletRequest request) {
 		performAction();
+		// If condition on the basis of what was clicked
+		//return "filename.csv" + pw2.toString() + ".download";
 		return "auditor.jsp";
 	}
 	

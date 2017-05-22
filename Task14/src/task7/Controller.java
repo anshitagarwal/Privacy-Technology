@@ -1,6 +1,7 @@
 package task7;
 
 import java.io.IOException;
+import java.io.OutputStream;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -49,8 +50,26 @@ public class Controller extends HttpServlet {
             return;
         }
 
+        if (nextPage.endsWith(".download")) {
+        	OutputStream out;
+    		try {
+    			String filename = nextPage.substring(0, nextPage.indexOf(".csv") + 4);
+    			nextPage = nextPage.substring(nextPage.indexOf(".csv") + 4);
+    			response.setHeader( "Content-Disposition", String.format("attachment; filename=\"%s\"", filename));
+    			out = response.getOutputStream();
+    			nextPage = nextPage.substring(0, nextPage.length() - 9);
+    			byte[] buffer = nextPage.getBytes();
+    			out.write(buffer);
+    			out.flush();
+
+    		} catch (IOException e) {
+    			e.printStackTrace();
+    		}
+    		return;
+        }
+
         if (nextPage.endsWith(".jsp")) {
-            RequestDispatcher d = request.getRequestDispatcher("WEB-INF/"
+        	RequestDispatcher d = request.getRequestDispatcher("WEB-INF/"
                     + nextPage);
             d.forward(request, response);
             return;
