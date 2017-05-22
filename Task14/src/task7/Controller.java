@@ -1,8 +1,6 @@
 package task7;
 
 import java.io.IOException;
-import java.util.Calendar;
-import java.sql.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,27 +8,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import org.genericdao.RollbackException;
-
-import task7.databeans.AuditorBean;
-import task7.model.AuditorDAO;
-import task7.model.Model;
 
 
-/**
- * Servlet implementation class Controller
- */
 @WebServlet("/Controller")
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	public void init() throws ServletException {
-        Model model;
-        model = new Model(getServletConfig());
-		Action.add(new AuditorAction(model));
- 
+        Action.add(new AuditorAction());
     }
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -45,16 +30,8 @@ public class Controller extends HttpServlet {
     }
     
     private String performTheAction(HttpServletRequest request) {
-//        HttpSession session = request.getSession(true);
         String servletPath = request.getServletPath();
-//        EmployeeBean employee = (EmployeeBean) session.getAttribute("employee");
-//        CustomerBean customer = (CustomerBean) session.getAttribute("customer");
         String action = getActionName(servletPath);
-        
-//        if (employee == null && customer == null) {
-//        	return Action.perform("login.do", request);
-//        }
-
         // Let the logged in user run his chosen action
         return Action.perform(action, request);
     }

@@ -16,7 +16,7 @@
         </init-param>
         <init-param>
           <param-name>    jdbcURL                 </param-name> 
-	      <param-value>   jdbc:mysql:///test?useSSL=false </param-value>
+	      <param-value>   jdbc:mysql:///task14?useSSL=false </param-value>
         </init-param>
     </servlet>
     

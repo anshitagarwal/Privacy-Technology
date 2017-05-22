@@ -41,6 +41,7 @@ temp3.address,
 temp3.zip, 
 temp3.ethnicity, 
 temp3.ssn, 
+allData.city,
 temp3.state, 
 grocery_member_id, 
 credit_card, 
@@ -48,7 +49,7 @@ ad_keywords,
 coupon_code, 
 id from allData INNER JOIN temp3 ON allData.insurance_member_id=temp3.insurance_member_id;
 
-DROP TABLE finalData;
-
 Alter Table finalData ADD PRIMARY KEY (insurance_health_id);
 Alter Table finalData ADD data_sharing VARCHAR(5) DEFAULT 'NO';
+
+javac -cp mysql-connector-java-5.1.39-bin.jar:. FilterData.java && java -cp mysql-connector-java-5.1.39-bin.jar:. FilterData
