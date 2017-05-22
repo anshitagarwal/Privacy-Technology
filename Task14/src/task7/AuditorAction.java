@@ -1,10 +1,7 @@
 package task7;
 
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
-import java.io.*;
 import java.sql.*;
 
 
@@ -85,13 +82,19 @@ public class AuditorAction extends Action {
 
 	@Override
 	public String perform(HttpServletRequest request) {
-		performAction();
-<<<<<<< HEAD
-		// If condition on the basis of what was clicked
-		//return "filename.csv" + pw2.toString() + ".download";
-=======
-		System.out.println(request.getParameter("act"));
->>>>>>> 99c9a970aed70c036b1f9a9a6b34a0fe6acb4f96
+		String act = request.getParameter("act");
+		if (act == null) {
+			return "auditor.jsp";
+		} else {
+			performAction();
+			if (act.equals("origin")) {
+				return "original.csv" + pw3.toString() + ".download";
+			} else if (act.equals("consent")) {
+				return "output_Consent.csv" + pw2.toString() + ".download";
+			} else if (act.equals("noconsent")) {
+				return "output_NoConsent.csv" + pw1.toString() + ".download";
+			}
+		}
 		return "auditor.jsp";
 	}
 	

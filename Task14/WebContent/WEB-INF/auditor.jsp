@@ -9,7 +9,7 @@
 <title>Auditor page</title>
 </head>
 <body>
-	<form action="auditor">
+	<form action="#">
 		<input type="submit" name="act" value="origin"/>
 		<input type="submit" name="act" value="consent"/>
 		<input type="submit" name="act" value="noconsent"/>
