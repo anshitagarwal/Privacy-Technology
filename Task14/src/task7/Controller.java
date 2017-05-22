@@ -15,20 +15,9 @@ import javax.servlet.http.HttpSession;
 import org.genericdao.RollbackException;
 
 import task7.databeans.AuditorBean;
-import task7.databeans.CustomerBean;
-import task7.databeans.EmployeeBean;
-import task7.databeans.FundBean;
-import task7.databeans.FundPriceHistoryBean;
-import task7.databeans.PositionBean;
-import task7.databeans.TransactionBean;
 import task7.model.AuditorDAO;
-import task7.model.CustomerDAO;
-import task7.model.EmployeeDAO;
-import task7.model.FundDAO;
-import task7.model.FundPriceHistoryDAO;
 import task7.model.Model;
-import task7.model.PositionDAO;
-import task7.model.TransactionDAO;
+
 
 /**
  * Servlet implementation class Controller

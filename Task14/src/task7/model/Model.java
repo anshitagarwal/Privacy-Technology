@@ -10,13 +10,6 @@ import org.genericdao.ConnectionPool;
 import org.genericdao.DAOException;
 import org.genericdao.RollbackException;
 
-import task7.databeans.CustomerBean;
-import task7.databeans.EmployeeBean;
-import task7.databeans.FundBean;
-import task7.databeans.FundPriceHistoryBean;
-import task7.databeans.PositionBean;
-import task7.databeans.TransactionBean;
-
 public class Model {
 //	private EmployeeDAO employeeDAO;
 //	private CustomerDAO customerDAO;
