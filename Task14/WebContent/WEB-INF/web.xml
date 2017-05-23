@@ -27,6 +27,7 @@
 
     <welcome-file-list>
         <!-- <welcome-file>   home.do   </welcome-file> -->
-        <welcome-file>   auditor.do   </welcome-file>
+        <!-- <welcome-file>   auditor.do   </welcome-file> -->
+        <welcome-file>   enrollment.do   </welcome-file>
     </welcome-file-list>
 </web-app>
