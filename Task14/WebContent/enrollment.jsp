@@ -31,7 +31,7 @@
               <label>
                 First Name<span class="req">*</span>
               </label>
-              <input name = "firstname" type="text" required autocomplete="off" />
+              <input id="firstnameID" name = "firstname" type="text" required autocomplete="off" />
             </div>
 
         
@@ -39,12 +39,12 @@
               <label>
                 Last Name<span class="req">*</span>
               </label>
-              <input name = "lastname" type="text"required autocomplete="off"/>
+              <input id="lastnameID" name = "lastname" type="text"required autocomplete="off"/>
             </div>
           </div>
 
             <div class="field-wrap">
-            <input name="dob" placeholder="Birth Date*" type="text" required onfocus="(this.type='date')" onfocusout="(this.type='text')">
+            <input id="dobID" name="dob" placeholder="Birth Date*" type="text" required onfocus="(this.type='date')" onfocusout="(this.type='text')">
             </div>
 
 
@@ -52,7 +52,7 @@
             <label>
               Phone number<span class="req">(optional)</span>
             </label>
-            <input name="phonenumber" type="text"required autocomplete="off"/>
+            <input id="phoneNumberID" name="phonenumber" type="text" autocomplete="off"/>
           </div>
 
           <h1>Account details</h1>
@@ -61,7 +61,7 @@
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input name="email" type="email"required autocomplete="off"/>
+            <input id="emailID" name="email" type="email"required autocomplete="off"/>
           </div>
 
 
@@ -73,14 +73,14 @@
             <label>
               Password<span class="req">*</span>
             </label>
-            <input name="password" type="password"required autocomplete="off"/>
+            <input id="passwordID" name="password" type="password"required autocomplete="off"/>
           </div>
 
           <div class="field-wrap">
             <label>
               Confirm Password<span class="req">*</span>
             </label>
-            <input name="confirmpassword" type="password"required autocomplete="off"/>
+            <input id="confirmpasswordID" name="confirmpassword" type="password"required autocomplete="off"/>
           </div>
 
 		  <input type="radio" name="consent" value="YES" style="float: left; width: 15px; height: 15px; margin-right: 10px;"> 
@@ -96,7 +96,22 @@
            <h3 class="tab">Already have an account? <a href="#login">Login </a></h3>
 <script>
 	function showRegisterAlert() {
-	    alert("Your information has been added to our database along with your preferences.");
+			if(checkFields()) {
+				alert("Your information has been added to our database along with your preferences.");	
+			}
+		}
+	
+	function checkFields() {
+		if(document.getElementById('firstnameID').value.length !=0 
+				&& document.getElementById('lastnameID').value.length !=0
+				&& document.getElementById('dobID').value.length !=0
+				&& document.getElementById('phoneNumberID').value.length !=0
+				&& document.getElementById('emailID').value.length !=0
+				&& document.getElementById('passwordID').value.length !=0
+				&& document.getElementById('confirmpasswordID').value.length !=0) {		
+			return true;
+		}
+		return false;
 	}
 </script>
 
