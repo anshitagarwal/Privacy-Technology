@@ -16,15 +16,15 @@
   <div class="form">
       
       <ul class="tab-group">
-        <li class="tab active"><a href="#signup">Sign Up</a></li>
-        <li class="tab"><a href="#login">Login</a></li>
+        <li class="tab active"><a href="#signup">Enroll</a></li>
+        <li class="tab"><a href="#login">Update Information</a></li>
       </ul>
       
       <div class="tab-content">
         <div id="signup">   
           <h1>Personal information</h1>
           
-          <form action="/" method="post">
+          <form action="#" method="post">
           
           <div class="top-row">
             <div class="field-wrap">
@@ -43,70 +43,9 @@
             </div>
           </div>
 
-          <!-- <div class="field-wrap">
-            <label>
-              Street Address<span class="req">*</span>
-            </label>
-            <input type="text"required autocomplete="off"/>
-          </div>
-
-          <div class="field-wrap">
-           <label>
-              Address Line 2<span class="req">(optional)</span>
-            </label>
-            <input type="text"required autocomplete="off"/>
-          </div> -->
-
-
-
-            <!-- div class="top-row">
             <div class="field-wrap">
-            <label>
-              City<span class="req">*</span>
-            </label>
-            <input type="text"required autocomplete="off"/ "> 
-            </div>
-
-
-          <div class="field-wrap">
-            <label>
-              Zip<span class="req">*</span>
-            </label>
-            <input type="text"required autocomplete="off" /"> 
-            </div>
-
-
-            </div>
-
-            <div class="top-row">
-            <div class="field-wrap">
-            <label>
-              State<span class="req">*</span>
-            </label>
-            <input type="text"required autocomplete="off"/ "> 
-            </div> -->
-
-<!-- 
-          <div class="field-wrap">
-            <label>
-              Country<span class="req">*</span>
-            </label>
-            <input type="text"required autocomplete="off" /"> 
-            </div>
-            </div> -->
-
-
-
-            <div class="field-wrap">
-           <!--  <label>
-              Birth Date<span class="req">*</span>
-            </label> -->
-            <!-- <input type="date"required autocomplete="off"/> -->
-<!-- 
-            <input class="form-control" type="text" onfocus="(this.type='date'); document.getElementById('datePlaceholder').innerText = ''" onblur="(this.type='text'); datePlaceholder" id="date"> -->
-            <!-- <input onfocus="(this.type='date')" class="js-form-control" placeholder="Birth Date*"> -->
             <input name="dob" placeholder="Birth Date*" type="text" required onfocus="(this.type='date')" onfocusout="(this.type='text')">
-          </div>
+            </div>
 
 
              <div class="field-wrap">
@@ -118,7 +57,7 @@
 
           <h1>Account details</h1>
 
-  <div class="field-wrap">
+  		  <div class="field-wrap">
             <label>
               Email Address<span class="req">*</span>
             </label>
@@ -144,10 +83,17 @@
             <input name="confirmpassword" type="password"required autocomplete="off"/>
           </div>
 
-          <h5> By creating an account, you agree to Giant Eagle’s Terms of Use and <a href="#later">Privacy Policy. </a> </h5>
+		  <input type="radio" name="consent" value="YES" style="float: left; width: 15px; height: 15px; margin-right: 10px;"> 
+          <h5>
+          	I agree to Giant Eagle’s Terms of Use and <a href="#later">Privacy Policy. </a> <br>
+          </h5>
+           <input type="radio" name="consent" value="NO" style="float: left; width: 15px; height: 15px; margin-right: 10px;"> 
+           <h5>
+  			I agree to Giant Eagle’s Terms of Use and <a href="#later">Privacy Policy</a>, but choose to remain deidentified. <br>
+           </h5>
           
           <button name="registerbutton" type="submit" class="button button-block"/>Register</button>
-           <h3 class="tab">Already have an account? <a href="#login">Login</a></ </h3>
+           <h3 class="tab">Already have an account? <a href="#login">Login </a></h3>
 
 
           </form>
@@ -156,32 +102,96 @@
         </div>
         
         <div id="login">   
-          
-          
-          <form action="/" method="post">
-          
+  
+          <h1>Personal information</h1>
+          <form action="#" method="post">
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                First Name<span class="req">*</span>
+              </label>
+              <input name = "firstname" type="text" required />
+            </div>
+
+        
+            <div class="field-wrap">
+              <label>
+                Last Name<span class="req">*</span>
+              </label>
+              <input name = "lastname" type="text"required autocomplete="off"/>
+            </div>
+          </div>
+
+            <div class="field-wrap">
+            <input name="dob" placeholder="Birth Date*" type="text" required onfocus="(this.type='date')" onfocusout="(this.type='text')">
+            </div>
+
+
+             <div class="field-wrap">
+            <label>
+              Phone number
+            </label>
+            <input name="phonenumber" type="text"required autocomplete="off"/>
+          </div>
+
+          <h1>Account details</h1>
+
+  		  <div class="field-wrap">
+            <label>
+              Email Address
+            </label>
+            <input name="email" type="email" autocomplete="off"/>
+          </div>
           <div class="field-wrap">
             <label>
-              Email Address<span class="req">*</span>
+              Street Address
             </label>
-            <input name = "loginemail" type="email"required autocomplete="off"/>
+            <input name="address" type="text" autocomplete="off"/>
           </div>
+          <div class="field-wrap">
+            <label>
+              City
+            </label>
+            <input name="city" type="text" autocomplete="off"/>
+          </div>
+          <div class="field-wrap">
+            <label>
+              ZIP
+            </label>
+            <input name="zip" type="text" autocomplete="off"/>
+          </div>
+          <div class="field-wrap">
+            <label>
+              State
+            </label>
+            <input name="state" type="text" autocomplete="off"/>
+          </div>
+
+
+            <input name="subscription" id="checkbox" type="checkbox" style="float: left; width: 25px;"><h5> 
+              Sign up to receive email updates on discounts, savings, promotions and other Giant Eagle offerings. 
+            </h5></input>
           
           <div class="field-wrap">
             <label>
               Password<span class="req">*</span>
             </label>
-            <input name = "loginpassword" type="password"required autocomplete="off"/>
+            <input name="password" type="password"required autocomplete="off"/>
           </div>
-          
-          <p class="forgot"><a href="#">Forgot Password?</a></p>
-          
-          <button class="button button-block"/>Log In</button>
-          
-          </form>
 
+		  <input type="radio" name="consent" value="YES" style="float: left; width: 15px; height: 15px; margin-right: 10px;"> 
+          <h5>
+          	I agree to Giant Eagle’s Terms of Use and <a href="#later">Privacy Policy. </a> <br>
+          </h5>
+           <input type="radio" name="consent" value="NO" style="float: left; width: 15px; height: 15px; margin-right: 10px;"> 
+           <h5>
+  			I agree to Giant Eagle’s Terms of Use and <a href="#later">Privacy Policy</a>, but choose to remain deidentified. <br>
+           </h5>
+          
+          <button name="registerbuttonupdate" type="submit" class="button button-block"/>Update Information</button>
+
+		</form>
         </div>
-        
       </div><!-- tab-content -->
       
 </div> <!-- /form -->
