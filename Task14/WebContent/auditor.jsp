@@ -17,6 +17,142 @@
 	<div class="tab-content">
 	<form action="#">
 		<h1>Download data of users who gave</h1>
+		
+		<!-- add -->
+		<h5>
+			<table style="width: 100%" border="1" align="center">
+					<tr>
+						<th>Column Name</th>
+						<th>Sharing Status for Opt-In users</th>
+						<th>Sharing Status for Opt-Out users</th>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">disease_name</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Shared</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">disease_treats</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Shared</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">chemical_name</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Shared</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">marketing_name</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Shared</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">prescription_probability</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Limited Shared - The information has been rounded so that no reverse identification is possible.</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">insurance_health_id</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Not Shared - Identifiable</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">plan_number</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Not Shared - Identifiable</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">firstname</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Not Shared - Identifiable</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">lastname</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Not Shared - Identifiable</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">gender</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Shared</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">dob</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Limited Shared - Only the age group of the person is shared.</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">address</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Not Shared - Identifiable</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">zip</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Not Shared - Identifiable</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">ethnicity</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Shared</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">ssn</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Not Shared - Identifiable</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">city</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Not Shared - Identifiable</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">state</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Shared</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">grocery_member_id</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Not Shared - Identifiable</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">credit_card</td>
+						<td align="center" valign="middle">Not Shared - Security Concerns</td>
+						<td align="center" valign="middle">Not Shared - Identifiable</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">ad_keywords</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Shared</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">coupon_code</td>
+						<td align="center" valign="middle">Shared</td>
+						<td align="center" valign="middle">Shared</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">id</td>
+						<td align="center" valign="middle">Not Shared - Internal Addressing</td>
+						<td align="center" valign="middle">Not Shared - Internal Addressing</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">data_sharing</td>
+						<td align="center" valign="middle">Not Shared - Internal Addressing</td>
+						<td align="center" valign="middle">Not Shared - Internal Addressing</td>
+					</tr>
+					<tr>
+						<td align="center" valign="middle">email</td>
+						<td align="center" valign="middle">Shared - If Available</td>
+						<td align="center" valign="middle">Not Shared - Identifiable</td>
+					</tr>
+					
+					
+				</table>
+			</h5>	
+				
+				<!-- add -->
+		
 		<ul class="tab-group">
 		<button name="act" type="submit" class="button button-block" value="consent" style="cursor: pointer; margin: 10px; font-size: 20px; text-transform: none;"/>Consent</button>
 		<button name="act" type="submit" class="button button-block" value="noconsent" style="cursor: pointer; margin: 10px; font-size: 20px; text-transform: none;"/>No Consent</button>
