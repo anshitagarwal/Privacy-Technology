@@ -64,10 +64,10 @@
             <input id="emailID" name="email" type="email"required autocomplete="off"/>
           </div>
 
-
+<!-- 
             <input name="subscription" id="checkbox" type="checkbox" style="float: left; width: 25px;"><h5> 
-              Sign up to receive email updates on discounts, savings, promotions and other Giant Eagle offerings. 
-            </h5></input>
+              By checking this box, you agree to give consent to Giant Eagle's policy of sharing your information with advertisers. 
+            </h5></input> -->
           
           <div class="field-wrap">
             <label>
@@ -85,34 +85,27 @@
 
 		  <input type="radio" name="consent" value="YES" style="float: left; width: 15px; height: 15px; margin-right: 10px;"> 
           <h5>
-          	I agree to Giant Eagle’s Terms of Use and <a href="https://drive.google.com/file/d/0B8B5IJp1AaerbWxxa3pYc2dRcDg/view?usp=sharing" target="_blank">Privacy Policy. </a> <br>
+          	I agree to Giant Eagle’s <a href="https://account.gianteagle.com/TermsOfUse">Terms of Use </a> and <a href="https://drive.google.com/file/d/0B8B5IJp1AaerbWxxa3pYc2dRcDg/view?usp=sharing" target="_blank">Privacy Policy. </a> <br>
           </h5>
            <input type="radio" name="consent" value="NO" style="float: left; width: 15px; height: 15px; margin-right: 10px;"> 
            <h5>
-  			I agree to Giant Eagle’s Terms of Use and <a href="https://drive.google.com/file/d/0B8B5IJp1AaerbWxxa3pYc2dRcDg/view?usp=sharing" target="_blank">Privacy Policy</a>, but choose to remain deidentified. <br>
+  			I agree to Giant Eagle’s <a href="https://account.gianteagle.com/TermsOfUse">Terms of Use </a> and <a href="https://drive.google.com/file/d/0B8B5IJp1AaerbWxxa3pYc2dRcDg/view?usp=sharing" target="_blank">Privacy Policy</a>, but choose to remain deidentified. <br>
            </h5>
           
           <button name="registerbutton" type="submit" class="button button-block" onclick="showRegisterAlert()"/>Register</button>
            <h3 class="tab">Already have an account? <a href="#login">Login </a></h3>
 <script>
 	function showRegisterAlert() {
-			if(checkFields()) {
-				alert("Your information has been added to our database along with your preferences.");	
-			}
-		}
-	
-	function checkFields() {
+		
 		if(document.getElementById('firstnameID').value.length !=0 
 				&& document.getElementById('lastnameID').value.length !=0
 				&& document.getElementById('dobID').value.length !=0
-				&& document.getElementById('phoneNumberID').value.length !=0
 				&& document.getElementById('emailID').value.length !=0
 				&& document.getElementById('passwordID').value.length !=0
-				&& document.getElementById('confirmpasswordID').value.length !=0) {		
-			return true;
+				&& document.getElementById('confirmpasswordID').value.length !=0) {
+					alert("Your information has been added to our database along with your preferences.");	
+				}
 		}
-		return false;
-	}
 </script>
 
 
@@ -188,10 +181,10 @@
           </div>
           
           
-
+<!-- 
             <input name="subscription" id="checkbox" type="checkbox" style="float: left; width: 25px;"><h5> 
-              Sign up to receive email updates on discounts, savings, promotions and other Giant Eagle offerings. 
-            </h5></input>
+              By checking this box, you agree to give consent to Giant Eagle's policy of sharing your information with advertisers. 
+            </h5></input> -->
           
           <div class="field-wrap">
             <label>
@@ -210,11 +203,11 @@
           
 		  <input type="radio" name="consent" value="YES" style="float: left; width: 15px; height: 15px; margin-right: 10px;"> 
           <h5>
-          	I agree to Giant Eagle’s Terms of Use and <a href="https://drive.google.com/file/d/0B8B5IJp1AaerbWxxa3pYc2dRcDg/view?usp=sharing" target="_blank">Privacy Policy. </a> <br>
+          	I agree to Giant Eagle’s <a href="https://account.gianteagle.com/TermsOfUse">Terms of Use </a> and <a href="https://drive.google.com/file/d/0B8B5IJp1AaerbWxxa3pYc2dRcDg/view?usp=sharing" target="_blank">Privacy Policy. </a> <br>
           </h5>
            <input type="radio" name="consent" value="NO" style="float: left; width: 15px; height: 15px; margin-right: 10px;"> 
            <h5>
-  			I agree to Giant Eagle’s Terms of Use and <a href="https://drive.google.com/file/d/0B8B5IJp1AaerbWxxa3pYc2dRcDg/view?usp=sharing" target="_blank">Privacy Policy</a>, but choose to remain deidentified. <br>
+  			I agree to Giant Eagle’s <a href="https://account.gianteagle.com/TermsOfUse">Terms of Use </a> and <a href="https://drive.google.com/file/d/0B8B5IJp1AaerbWxxa3pYc2dRcDg/view?usp=sharing" target="_blank">Privacy Policy</a>, but choose to remain deidentified. <br>
            </h5>
           
           <button name="registerbuttonupdate" type="submit" class="button button-block" onclick="showAlert()"/>Update Information</button>
