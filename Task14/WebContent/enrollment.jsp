@@ -85,11 +85,11 @@
 
 		  <input type="radio" name="consent" value="YES" style="float: left; width: 15px; height: 15px; margin-right: 10px;"> 
           <h5>
-          	I agree to Giant Eagle’s Terms of Use and <a href="#later">Privacy Policy. </a> <br>
+          	I agree to Giant Eagle’s Terms of Use and <a href="https://drive.google.com/file/d/0B8B5IJp1AaerbWxxa3pYc2dRcDg/view?usp=sharing" target="_blank">Privacy Policy. </a> <br>
           </h5>
            <input type="radio" name="consent" value="NO" style="float: left; width: 15px; height: 15px; margin-right: 10px;"> 
            <h5>
-  			I agree to Giant Eagle’s Terms of Use and <a href="#later">Privacy Policy</a>, but choose to remain deidentified. <br>
+  			I agree to Giant Eagle’s Terms of Use and <a href="https://drive.google.com/file/d/0B8B5IJp1AaerbWxxa3pYc2dRcDg/view?usp=sharing" target="_blank">Privacy Policy</a>, but choose to remain deidentified. <br>
            </h5>
           
           <button name="registerbutton" type="submit" class="button button-block"/>Register</button>
@@ -183,18 +183,18 @@
 
 			<div class="field-wrap">
             <label>
-              Reason for Information Update
+              Reason for Information Update<span class="req">*</span>
             </label>
-            <textarea rows="4" cols="50"></textarea>
+            <textarea rows="4" cols="50" required="required"></textarea>
           </div>
           
 		  <input type="radio" name="consent" value="YES" style="float: left; width: 15px; height: 15px; margin-right: 10px;"> 
           <h5>
-          	I agree to Giant Eagle’s Terms of Use and <a href="#later">Privacy Policy. </a> <br>
+          	I agree to Giant Eagle’s Terms of Use and <a href="https://drive.google.com/file/d/0B8B5IJp1AaerbWxxa3pYc2dRcDg/view?usp=sharing" target="_blank">Privacy Policy. </a> <br>
           </h5>
            <input type="radio" name="consent" value="NO" style="float: left; width: 15px; height: 15px; margin-right: 10px;"> 
            <h5>
-  			I agree to Giant Eagle’s Terms of Use and <a href="#later">Privacy Policy</a>, but choose to remain deidentified. <br>
+  			I agree to Giant Eagle’s Terms of Use and <a href="https://drive.google.com/file/d/0B8B5IJp1AaerbWxxa3pYc2dRcDg/view?usp=sharing" target="_blank">Privacy Policy</a>, but choose to remain deidentified. <br>
            </h5>
           
           <button name="registerbuttonupdate" type="submit" class="button button-block" onclick="showAlert()"/>Update Information</button>
