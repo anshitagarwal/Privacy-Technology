@@ -172,8 +172,8 @@
 				<!-- add -->
 		
 		<ul class="tab-group">
-		<button name="act" type="submit" class="button button-block" value="consent" style="cursor: pointer; margin: 10px; font-size: 20px; text-transform: none;"/>Consent</button>
-		<button name="act" type="submit" class="button button-block" value="noconsent" style="cursor: pointer; margin: 10px; font-size: 20px; text-transform: none;"/>No Consent</button>
+		<button name="act" type="submit" class="button button-block" value="consent" style="cursor: pointer; margin: 10px; font-size: 20px; text-transform: none;"/>Data of user's who Opted-In</button>
+		<button name="act" type="submit" class="button button-block" value="noconsent" style="cursor: pointer; margin: 10px; font-size: 20px; text-transform: none;"/>Data of user's who Opted-Out</button>
 		<button name="act" type="submit" class="button button-block" value="historydata" style="cursor: pointer; margin: 10px; font-size: 20px; text-transform: none;" onclick="showAlert2()"/>History Data</button>
 		</ul>
 			</form>
