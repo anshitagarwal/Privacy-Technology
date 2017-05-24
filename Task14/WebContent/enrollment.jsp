@@ -92,8 +92,13 @@
   			I agree to Giant Eagle’s Terms of Use and <a href="https://drive.google.com/file/d/0B8B5IJp1AaerbWxxa3pYc2dRcDg/view?usp=sharing" target="_blank">Privacy Policy</a>, but choose to remain deidentified. <br>
            </h5>
           
-          <button name="registerbutton" type="submit" class="button button-block"/>Register</button>
+          <button name="registerbutton" type="submit" class="button button-block" onclick="showRegisterAlert()"/>Register</button>
            <h3 class="tab">Already have an account? <a href="#login">Login </a></h3>
+<script>
+	function showRegisterAlert() {
+	    alert("Your information has been added to our database along with your preferences.");
+	}
+</script>
 
 
           </form>

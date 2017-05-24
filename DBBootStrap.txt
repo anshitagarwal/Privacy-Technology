@@ -54,4 +54,5 @@ Alter Table finalData ADD data_sharing VARCHAR(12) DEFAULT 'UNENROLLED';
 Alter Table finalData ADD email VARCHAR(50) DEFAULT '';
 
 SANJUANITA LOPEZ 1992-11-16
+JAIME ALEXANDER 1992-11-06
 javac -cp mysql-connector-java-5.1.39-bin.jar:. FilterData.java && java -cp mysql-connector-java-5.1.39-bin.jar:. FilterData
