@@ -33,7 +33,7 @@
             </label>
             <textarea rows="4" cols="50"></textarea>
           </div>
-		<h5>Check out our <a href="https://drive.google.com/file/d/0B8B5IJp1AaerbWxxa3pYc2dRcDg/view?usp=sharing" target="_blank">Privacy Policy.</a></h5>
+		<h5>Giant Eagle's <a href="https://drive.google.com/file/d/0B8B5IJp1AaerbWxxa3pYc2dRcDg/view?usp=sharing" target="_blank">Privacy Policy</a></h5>
 		<h1 style="font-size: 26px;">Data Information</h1>
 		
 		<!-- add -->
@@ -172,9 +172,9 @@
 				<!-- add -->
 		
 		<ul class="tab-group">
-		<button name="act" type="submit" class="button button-block" value="consent" style="cursor: pointer; margin: 10px; font-size: 20px; text-transform: none;"/>Data of user's who Opted-In</button>
-		<button name="act" type="submit" class="button button-block" value="noconsent" style="cursor: pointer; margin: 10px; font-size: 20px; text-transform: none;"/>Data of user's who Opted-Out</button>
-		<button name="act" type="submit" class="button button-block" value="historydata" style="cursor: pointer; margin: 10px; font-size: 20px; text-transform: none;" onclick="showAlert2()"/>History Data</button>
+		<button name="act" type="submit" class="button button-block" value="consent" style="cursor: pointer; margin: 10px; font-size: 20px; text-transform: none;"/>Download data of users who have opted in</button>
+		<button name="act" type="submit" class="button button-block" value="noconsent" style="cursor: pointer; margin: 10px; font-size: 20px; text-transform: none;"/>Download data of users who have opted out</button>
+		<button name="act" type="submit" class="button button-block" value="historydata" style="cursor: pointer; margin: 10px; font-size: 20px; text-transform: none;" onclick="showAlert2()"/>Download historical data</button>
 		</ul>
 			</form>
 	
