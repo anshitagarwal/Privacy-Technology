@@ -21,11 +21,16 @@ public class EnrollmentAction extends Action {
 		String registerbuttonupdate = request.getParameter("registerbuttonupdate");
 		//if (registerbutton != null || registerbuttonupdate != null) {
 		if (registerbutton != null) {
-			String firstname = request.getParameter("firstname").trim();
-			String lastname = request.getParameter("lastname").trim();
-			String dob = request.getParameter("dob").trim();
-			String email = request.getParameter("email").trim();
-			String consent = request.getParameter("consent").trim();
+			String firstname = request.getParameter("firstname");
+			firstname = firstname == null? firstname: firstname.trim();
+			String lastname = request.getParameter("lastname");
+			lastname = lastname == null? lastname : lastname.trim();
+			String dob = request.getParameter("dob");
+			dob = dob == null? dob : dob.trim();
+			String email = request.getParameter("email");
+			email = email == null? email : email.trim();
+			String consent = request.getParameter("consent");
+			consent = consent == null? consent : consent.trim();
 
 			String sql = "";
 			if (consent.equals("YES")) {
