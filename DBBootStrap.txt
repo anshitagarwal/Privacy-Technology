@@ -51,7 +51,6 @@ id from allData INNER JOIN temp3 ON allData.insurance_member_id=temp3.insurance_
 
 Alter Table finalData ADD PRIMARY KEY (insurance_health_id);
 Alter Table finalData ADD data_sharing VARCHAR(12) DEFAULT 'UNENROLLED';
-Alter Table finalData DROP COLUMN email;
 Alter Table finalData ADD email VARCHAR(50) DEFAULT '';
 
 SANJUANITA LOPEZ 1992-11-16
