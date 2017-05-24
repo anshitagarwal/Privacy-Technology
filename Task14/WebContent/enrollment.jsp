@@ -166,7 +166,8 @@
             </label>
             <input name="state" type="text" autocomplete="off"/>
           </div>
-
+          
+          
 
             <input name="subscription" id="checkbox" type="checkbox" style="float: left; width: 25px;"><h5> 
               Sign up to receive email updates on discounts, savings, promotions and other Giant Eagle offerings. 
@@ -179,6 +180,14 @@
             <input name="password" type="password"required autocomplete="off"/>
           </div>
 
+
+			<div class="field-wrap">
+            <label>
+              Reason for Information Update
+            </label>
+            <textarea rows="4" cols="50"></textarea>
+          </div>
+          
 		  <input type="radio" name="consent" value="YES" style="float: left; width: 15px; height: 15px; margin-right: 10px;"> 
           <h5>
           	I agree to Giant Eagle’s Terms of Use and <a href="#later">Privacy Policy. </a> <br>
@@ -188,13 +197,18 @@
   			I agree to Giant Eagle’s Terms of Use and <a href="#later">Privacy Policy</a>, but choose to remain deidentified. <br>
            </h5>
           
-          <button name="registerbuttonupdate" type="submit" class="button button-block"/>Update Information</button>
+          <button name="registerbuttonupdate" type="submit" class="button button-block" onclick="showAlert()"/>Update Information</button>
+          
+<script>
+	function showAlert() {
+	    alert("Your request has been submitted to Giant Bagel. It will be reviewed and updated.");
+	}
+</script>
 
 		</form>
+		</div>
         </div>
       </div><!-- tab-content -->
-      
-</div> <!-- /form -->
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script src="js/index.js"></script>

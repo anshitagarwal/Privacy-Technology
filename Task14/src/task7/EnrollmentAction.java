@@ -19,7 +19,8 @@ public class EnrollmentAction extends Action {
 	public String perform(HttpServletRequest request) {
 		String registerbutton = request.getParameter("registerbutton");
 		String registerbuttonupdate = request.getParameter("registerbuttonupdate");
-		if (registerbutton != null || registerbuttonupdate != null) {
+		//if (registerbutton != null || registerbuttonupdate != null) {
+		if (registerbutton != null) {
 			String firstname = request.getParameter("firstname").trim();
 			String lastname = request.getParameter("lastname").trim();
 			String dob = request.getParameter("dob").trim();
