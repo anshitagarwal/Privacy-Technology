@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 public class EnrollmentAction extends Action {
 
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://localhost/task14";
+    static final String DB_URL = "jdbc:mysql://localhost/task14?useSSL=false";
 	@Override
 	public String getName() {
 		return "enrollment.do";

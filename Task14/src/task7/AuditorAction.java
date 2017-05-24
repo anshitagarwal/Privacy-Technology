@@ -8,7 +8,7 @@ import java.sql.*;
 public class AuditorAction extends Action {
 	
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://localhost/task14";
+    static final String DB_URL = "jdbc:mysql://localhost/task14?useSSL=false";
     static String[] ageGroup = {"0 - 10", "11 - 18", "19 - 25", "25 - 32", "32 - 40", "40 - 50", "50 - 60", "60 - 70", "70 - 80", "90+"}; 
     StringBuffer pw1;
     StringBuffer pw2;

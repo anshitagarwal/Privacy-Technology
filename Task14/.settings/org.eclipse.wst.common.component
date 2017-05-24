@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="Mutual_Fund_WebAPP">
+    <wb-module deploy-name="privacyTechnology">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="Mutual_Fund_WebAPP"/>
-        <property name="java-output-path" value="/Mutual_Fund_WebAPP/build/classes"/>
+        <property name="context-root" value="privacyTechnology"/>
+        <property name="java-output-path" value="/privacyTechnology/build/classes"/>
     </wb-module>
 </project-modules>
