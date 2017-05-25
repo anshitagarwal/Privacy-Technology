@@ -216,6 +216,10 @@
 	function showAlert() {
 	    alert("Your request has been submitted to Giant Bagel. It will be reviewed and updated.");
 	}
+	
+	function contactUs() {
+		alert("Privacy Officer, 5000 Forbes Ave., Pittsburgh, Pennsylvania 15213 \n \n" + "Phone: 800-222-6698 [ext 1001] | Fax: 800-222-6678");
+	}
 </script>
 
 		</form>
@@ -225,6 +229,14 @@
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script src="js/index.js"></script>
-
+    
+<footer style="text-align:center">
+  <p>  © Giant Eagle Inc. </p>
+  <p> <a href="https://drive.google.com/file/d/0B8B5IJp1AaerbWxxa3pYc2dRcDg/view"> Privacy Policy </a>  |
+  	  <a href="https://account.gianteagle.com/TermsOfUse">  Terms of use </a>  |
+  	  <a href="javascript:contactUs();">  Contact us </a>
+  	  </p>
+  <p> Team 3 | MSIT eBusiness Technology | Carnegie Mellon University | Design: CodePen</p>
+</footer>
 </body>
 </html>
